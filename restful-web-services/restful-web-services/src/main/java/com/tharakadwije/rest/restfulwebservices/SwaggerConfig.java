@@ -21,7 +21,7 @@ import java.util.Set;
 public class SwaggerConfig {
 
     public static final Contact DEFAULT_CONTACT = new Contact(
-            "Ranga Karanam", "http://www.in28minutes.com", "in28minutes@gmail.com");
+            "Tharaka Dinesh", "https://github.com/tharakadwije", "tharaka@gmail.com");
 
     public static final ApiInfo DEFAULT_API_INFO = new ApiInfo(
             "Awesome API Title", "Awesome API Description", "1.0",
