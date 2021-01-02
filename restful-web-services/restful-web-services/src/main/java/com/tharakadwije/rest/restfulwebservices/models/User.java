@@ -1,17 +1,24 @@
 package com.tharakadwije.rest.restfulwebservices.models;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 import java.util.Date;
 
+@ApiModel(description = "All details about the user")
 public class User {
 
     private Integer id;
 
     @Size(min = 2 ,message = "Name must contain a atleast 2 charactors")
+    @ApiModelProperty(notes = "Name must be more than two letters")
     private  String name;
 
     @Past
+    @ApiModelProperty(notes = "Date must be past date")
     private Date bdate;
 
 
