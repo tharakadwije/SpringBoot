@@ -53,10 +53,10 @@ public class UserDaoService {
 
             User u = (User) iterator.next();
 
-            if (u.getId() == id)
-             listOfUser.remove(u);
-               // iterator.remove();
-             return u;
+            if (u.getId() == id) {
+                iterator.remove();
+                return u;
+            }
         }
         return null;
     }

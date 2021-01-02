@@ -1,13 +1,17 @@
 package com.tharakadwije.rest.restfulwebservices.models;
 
+import javax.validation.constraints.Past;
+import javax.validation.constraints.Size;
 import java.util.Date;
 
 public class User {
 
     private Integer id;
 
+    @Size(min = 2 ,message = "Name must contain a atleast 2 charactors")
     private  String name;
 
+    @Past
     private Date bdate;
 
 
