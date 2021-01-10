@@ -5,8 +5,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class SomeBusinessLogic {
 
-    @Autowired
     SomeDataService someDataService;
+
+    public void setSomeDataService(SomeDataService someDataService) {
+        this.someDataService = someDataService;
+    }
 
     public int calculateTotalSum(int [] intArray){
         int sum=0;
