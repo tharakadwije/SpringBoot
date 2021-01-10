@@ -3,24 +3,24 @@ package com.tharakadwije.rest.restfulwebservices;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
-class SomeBusinessLogicTest {
+class SomeBusinessLogicStubTest {
+
 
     @Test
-    void calculateTotalSum_Null() {
+    void calculateTotalSumDataService_Null() {
 
         SomeBusinessLogic logic = new SomeBusinessLogic();
 
-        int [] array = null;
-        int actualValue = logic.calculateTotalSum(array);
+        int actualValue = logic.calculateTotalSumDataService();
         int expectedValue = 0;
         assertEquals(expectedValue,actualValue);
     }
 
     @Test
-    void calculateTotalSum_Empty() {
+    void calculateTotalSumDataService_Empty() {
 
         SomeBusinessLogic logic = new SomeBusinessLogic();
 
@@ -31,7 +31,7 @@ class SomeBusinessLogicTest {
     }
 
     @Test
-    void calculateTotalSum_OneValue() {
+    void calculateTotalSumDataService_OneValue() {
 
         SomeBusinessLogic logic = new SomeBusinessLogic();
 
@@ -42,7 +42,7 @@ class SomeBusinessLogicTest {
     }
 
     @Test
-    void calculateTotalSum_Basic() {
+    void calculateTotalSumDataService_Basic() {
 
         SomeBusinessLogic logic = new SomeBusinessLogic();
 
@@ -51,5 +51,4 @@ class SomeBusinessLogicTest {
         int expectedValue = 6;
         assertEquals(expectedValue,actualValue);
     }
-
 }

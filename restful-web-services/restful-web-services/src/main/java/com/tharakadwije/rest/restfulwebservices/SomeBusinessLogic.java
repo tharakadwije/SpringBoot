@@ -1,11 +1,29 @@
 package com.tharakadwije.rest.restfulwebservices;
 
+import com.tharakadwije.rest.restfulwebservices.user.SomeDataService;
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class SomeBusinessLogic {
+
+    @Autowired
+    SomeDataService someDataService;
 
     public int calculateTotalSum(int [] intArray){
         int sum=0;
-        for(int i : intArray){
-            sum+=i;
+        if(intArray!=null) {
+            for (int i : intArray) {
+                sum += i;
+            }
+        }
+        return sum;
+    }
+
+    public int calculateTotalSumDataService(){
+        int sum=0;
+        if(someDataService.callSomeDate()!=null) {
+            for (int i : someDataService.callSomeDate()) {
+                sum += i;
+            }
         }
         return sum;
     }
